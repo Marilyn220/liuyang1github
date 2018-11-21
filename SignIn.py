@@ -17,7 +17,7 @@ class LoginCase(unittest.TestCase):
     self.dr.maximize_window()
 
 
- def login(self, username, password):jnknjcc
+ def login(self, username, password):
         self.dr.get('https://passport.cnblogs.com/user/signin')  #cnblog登录页面
         self.dr.find_element_by_id('input1').send_keys(username)
         self.dr.find_element_by_id('input2').send_keys(password)
