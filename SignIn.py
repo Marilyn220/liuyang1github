@@ -10,9 +10,9 @@ time.sleep(5)
 EC.title_contains("运营中心") #Use the title to determine if the page is open
 print(EC.title_contains("运营中心"))
 
-element=driver.find_element_by_class_name("login-label")
-EC.visibility_of_element_located(element)
-locator=(By.CLASS_NAME,"controls")
+#element=driver.find_element_by_class_name("login-label")
+#EC.visibility_of_element_located(element)#judge if the element is visible
+locator=(By.CLASS_NAME,"login-label")
 WebDriverWait(driver,10).until(EC.visibility_of_element_located(locator))
 driver.close()
 #driver.find_element_by_xpath("//*[@id='name']").send_keys("U2201501011000000002")
