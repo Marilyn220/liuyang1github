@@ -4,11 +4,11 @@ from ShowapiRequest import ShowapiRequest
 from PIL import Image
 import random
 import time
-class ff ():
+class siginIn ():
     driver = webdriver.Chrome()
     file_name1 = "D:/code/test.png"
-    #browser init
 
+    #browser init
     def driver_init(self):
         self.driver.get('http://test.qianbaocard.com:23480/manager/index.html')
         self.driver.maximize_window()
@@ -49,7 +49,7 @@ class ff ():
         text = res.json()['showapi_res_body']['Result']
         return text
 
-    # run main programe
+    # run main program
     def run_main(self):
         #user_name=get_range_user()
         file_name="D:/code/test.png"
@@ -61,4 +61,4 @@ class ff ():
         self.get_element("code").send_keys(text)
         self.get_element("login").click()
         self.driver.close()
-ff().run_main()
+siginIn().run_main()
