@@ -64,7 +64,7 @@ class RegisterFunction():
         self.send_user_info('password', "12345678")
         self.send_user_info('code_text', code_text)
         self.get_user_element('register_button').click()
-        time.sleep(5)
+        time.sleep(10)
         self.driver.close()
 
 if __name__ == '__main__':
