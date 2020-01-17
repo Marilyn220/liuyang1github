@@ -7,11 +7,12 @@ from ShowapiRequest import ShowapiRequest
 from PIL import Image
 import time
 import random
+
 driver = webdriver.Chrome()
 driver.get('http://test.qianbaocard.com:23480/manager/index.html')
 time.sleep(5)
 EC.title_contains("运营中心") #Use the title to determine if the page is open
-print(EC.title_contains("运营中心"))
+print(EC.title_contains("运营中心"))   
 name_element=driver.find_element_by_id("name")
 driver.save_screenshot("D:/test.png")
 code_element=driver.find_element_by_id("validationCodeImg")
@@ -24,23 +25,23 @@ im=Image.open("D:/test.png")
 img=im.crop((left,top,right,height))
 img.save("D:/newtest.png")
 
+
 r = ShowapiRequest("http://route.showapi.com/184-4","81842","34a47f67a8b2436783df77a3b4fe6481" )
 #r.addBodyPara("img_base64", "")
-r.addBodyPara("typeId", "30")
+r.addBodyPara("typeId", "34")
 r.addBodyPara("convert_to_jpg", "1")
-#r.addBodyPara("needMorePrecise", "0")
+r.addBodyPara("needMorePrecise", "0")
 r.addFilePara("image", r"D:/newtest.png") #文件上传时设置
 res = r.post()
 text=res.json()['showapi_res_body']['Result']
 print(text) # 返回信息
 time.sleep(2)
-driver.find_element_by_id("code").send_keys(text)
+#driver.find_element_by_id("code").send_keys(text)
 
-'''
-for i in range(5):
-    user_name=''.join(random.sample('123456789abcdefg',20))
-    print(user_name)
-'''
+#for i in range(5):
+#    user_name=''.join(random.sample('123456789abcdefg',20))
+#    print(user_name)
+
 #element=driver.find_element_by_class_name("login-label")
 #EC.visibility_of_element_located(element)#judge if the element is visible
 locator=(By.CLASS_NAME,"login-label")

@@ -41,9 +41,9 @@ class siginIn ():
     def code_online(self,file_name):
         r = ShowapiRequest("http://route.showapi.com/184-4", "81842", "34a47f67a8b2436783df77a3b4fe6481")
         # r.addBodyPara("img_base64", "")
-        r.addBodyPara("typeId", "30")
+        r.addBodyPara("typeId", "34")
         r.addBodyPara("convert_to_jpg", "1")
-        # r.addBodyPara("needMorePrecise", "0")
+        r.addBodyPara("needMorePrecise", "0")
         r.addFilePara("image", file_name)  # 文件上传时设置
         res = r.post()
         text = res.json()['showapi_res_body']['Result']
@@ -60,5 +60,6 @@ class siginIn ():
         text=self.code_online(file_name)
         self.get_element("code").send_keys(text)
         self.get_element("login").click()
+        time.sleep(5)
         self.driver.close()
 siginIn().run_main()

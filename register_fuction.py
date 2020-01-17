@@ -5,16 +5,23 @@ import time
 import random
 from PIL import Image
 from ShowapiRequest import ShowapiRequest
-from find_element import FindElement
+from base.find_element import FindElement
 class RegisterFunction():
-    def __init__(self,url):
-        self.driver=self.get_driver(url)
+    def __init__(self,url,i):
+        self.driver=self.get_driver(url,i)
     #get driver and open url
-    def get_driver(self,url):
-        driver=webdriver.Chrome()
+    def get_driver(self,url,i):
+        if i==1:
+            driver=webdriver.Chrome()
+        elif i==2:
+            driver=webdriver.Firefox()
+        else:
+            driver=webdriver.Edge()
+
         driver.get(url)
         driver.maximize_window()
         return driver
+
     #input user's infomation
     def send_user_info(self,key,data):
         self.get_user_element(key).send_keys(data)
@@ -68,5 +75,6 @@ class RegisterFunction():
         self.driver.close()
 
 if __name__ == '__main__':
-    register_fuction=RegisterFunction('http://test.qianbaocard.com:23480/manager/index.html')
-    register_fuction.main()
+    for i in range(3):
+        register_fuction=RegisterFunction('http://test.qianbaocard.com:23480/manager/index.html',1)
+        register_fuction.main()
