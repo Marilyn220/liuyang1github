@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交进件</title>
+</head>
+<body>
+<a href="/">返回</a>
+        <form method="post">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{ form.iphone_number.label }}
+                {% if form.iphone_number.errors %}
+                    {{ form.iphone_number(class='form-control is-invalid') }}
+                    {% for error in form.iphone_number.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.iphone_number(class='form-control') }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.password.label }}
+                {% if form.password.errors %}
+                    {{ form.password(class='form-control is-invalid') }}
+                    {% for error in form.password.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.password(class='form-control') }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.money.label }}
+                {% if form.money.errors %}
+                    {{ form.money(class='form-control is-invalid') }}
+                    {% for error in form.money.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.money(class='form-control') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.timelimit.label }}
+                {% if form.timelimit.errors %}
+                    {{ form.timelimit(class='form-control is-invalid') }}
+                    {% for error in form.timelimit.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {{ form.timelimit(class='form-control') }}
+                {% endif %}
+            </div>
+            {{ form.submit(class='btn btn-primary') }}
+        </form>
+失败信息如下：<br>
+<li>{{error}}</li>
+成功信息如下：<br>
+<li>{{succeed}}</li>
+</body>
+</html>

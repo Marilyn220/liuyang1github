@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人脸识别、身份证识别(H5)、身份证扫描(APP)、身份证正反面</title>
+</head>
+<body>
+<h1>人脸识别、身份证识别(H5)、身份证扫描(APP)、身份证正反面</h1>
+
+<a href="/">返回</a>
+
+<form id="inputForm" class="form-horizontal" action="" method="post" >
+
+        <label>输入认证用户的手机号</label>
+        <input id="ip" type="text" name="ip" >
+
+        <label>请选择认证项</label>
+        <select name="test">
+        <option value="0"></option>
+            <option value="1">个人信息补充</option>
+        <option value="36">身份证识别(h5)</option>
+            <option value="30">人脸识别</option>
+            <option value="P11">身份证P11照片</option>
+            <option value="P12">身份证P12照片</option>
+
+        </select>
+    <select name="id">
+          <option value ="92">92环境</option>
+          <option value ="83">83环境</option>
+        </select>
+
+        <input type="submit" value="提交">
+    </form>
+<br>
+失败信息如下：<br>
+<li>{{error}}</li>
+成功信息如下：<br>
+<li>{{succeed}}</li>
+
+</body>
+</html>

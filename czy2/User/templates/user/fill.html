@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加联系人认证</title>
+</head>
+<body>
+<h1>联系人认证</h1>
+
+<a href="/">返回</a>
+
+<form id="creatuser" action="" method="post" >
+    Iphone:<input id="iphone_number" type="text" name="ip" >
+    密码:<input id="pwd" type="text" name="pwd" >
+    <select name="id">
+          <option value ="92">92环境</option>
+          <option value ="83">83环境</option>
+        </select>
+    <input type="submit" value="提交">
+</form>
+失败信息如下：<br>
+<li>{{error}}</li>
+成功信息如下：<br>
+<li>{{succeed}}</li>
+
+</body>
+</html>

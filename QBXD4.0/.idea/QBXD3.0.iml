@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Public" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TestCase" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TestCase/Product01" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TestCase/Product01/chengzy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PO" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TestCase/Product01/chengzy/PO" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7 (p3env)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/Lib/site-packages/tornado/test/templates" />
+      </list>
+    </option>
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

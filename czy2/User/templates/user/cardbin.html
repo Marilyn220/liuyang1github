@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定银行卡</title>
+</head>
+<body>
+<h1>绑定银行卡</h1>
+
+<a href="/">返回</a>
+
+<form id="inputForm" class="form-horizontal" action="" method="post" >
+        登录手机号:<input id="ip" type="text" name="ip" >
+        登录密码:<input id="pwd" type="text" name="pwd" >
+        银行卡号:<input id="dbin" type="text" name="dbin" >
+    <select name="id">
+          <option value ="92">92环境</option>
+          <option value ="83">83环境</option>
+        </select>
+        <input type="submit" value="提交">
+    </form>
+<br>
+失败信息如下：<br>
+<li>{{error}}</li>
+成功信息如下：<br>
+<li>{{succeed}}</li>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Forms</h1>
+<ul>
+    <h1>aaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <li><a href="{{ url_for('bigdata.login') }}">bigdata.login</a></li>
+    <li><a href="{{ url_for('sayhello.hello') }}">sayhello.hello</a></li>
+</ul>
+<h4>用户数:{{ users|length }} </h4>
+{% for user in users %}
+<p>{{user}}</p>
+{% endfor %}
+{% endblock %}
