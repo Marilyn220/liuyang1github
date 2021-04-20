@@ -28,7 +28,7 @@ Pillow==5.4.1
 pipenv==2018.11.26
 progress==1.4
 pure-python-adb==0.1.6.dev0
-py==1.7.0
+py==1.10.0
 pyasn1==0.4.5
 pycryptodome==3.7.3
 PyMySQL==0.9.3
